@@ -1,0 +1,21 @@
+  addi r0, rf, 1;  
+  addi r0, r1, 0;   a = r1
+  dsp r1;
+  addi r0, r2, 1;   b = r2
+  dsp r2;
+  addi r0, r3, 10;  n = r3 n = 10
+
+
+loop_1:
+  add r1, r2, r4;   fib = r4, fib = a + b
+  dsp r4;
+  add r0, r2, r1;   a = b
+  add r0, r4, r2;   b = fib
+  sub r3, rf, r3;   n = n - 1
+  jz r0, r3, fim;
+  jmp loop_1;
+
+
+  
+fim:
+  halt;
