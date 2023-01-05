@@ -18,6 +18,8 @@ pode conter numeros e undescore, exceto no primeiro caractere.
     * or -> "a, b, c;", onde a, b, c sao registradores; C <- A | B; Ex: or r3, rd, r0;
     * xor -> "a, b, c;", onde a, b, c sao registradores; C <- A ^ B; Ex: xor r3, rd, r0;
     * not -> "a, b;", onde a, b sao registradores; B <- !A; Ex: not r3, r0;
+    * sll -> "a, b, c;", onde a, b, c sao registradores; C <- A << B; Ex: sll r3, rd, r0;
+    * slr -> "a, b, c;", onde a, b, c sao registradores; C <- A >> B; Ex: slr r3, rd, r0;
     * ori -> "a, b, C;", onde a, b sao registradores e C e uma constante positiva; B <- A | C; Ex: ori r3, rd, 12;
     * xori -> "a, b, C;", onde a, b sao registradores e C e uma constante positiva; B <- A ^ C; Ex: xori r3, rd, 12;
     * addi -> "a, b, C;", onde a, b sao registradores e C e uma constante positiva; B <- A + C; Ex: addi r3, rd, 12;
