@@ -2,10 +2,10 @@
 Assembler para o MICO X.
 
 ## Code format
-'''asm
+``asm
 <label>:         tudo depois de ':' eh ignorado
   <inst> <args>; tudo depois de ';' eh ignorado
-'''
+``
 
 * <label> -> deve ser um nome com ate 100 caracteres, letras minusculas apenas,
 pode conter numeros e undescore, exceto no primeiro caractere.
@@ -35,7 +35,7 @@ para o padrao "  addi a, b, C;", se for escrito da forma "  addi a,  b,c;" nao v
 #Exemplo
 Mostra os 12 primeiros numeros da sequencia de fibonacci.
 
-'''asm
+``asm
   addi r0, rf, 1;  
   addi r0, r1, 0;   a = r1
   dsp r1;
@@ -56,7 +56,7 @@ loop_1:
   
 fim:
   halt;
-'''
+``
 # Compiling
 gcc -Wall -std=c11 miasm.c -o miasm
 
