@@ -63,9 +63,10 @@ gcc -Wall -std=c11 miasm.c -o miasm
 ```
 
 # Runing
+Substitua o nome de <input> e <output> pelo nome do seus arquivos com o codigo em assembly e onde vai salvar o valor em hexadecimal respectivamente.
 ```console
-./miasm input.mico > output.mo
+./miasm <input> > <output>
 ```
 
-Abra o logisim e na memoria do programa edite ela e abra o arquivo output.hex, escolha o formato hexadecimal e salve.
+Abra o logisim e na memoria do programa edite ela e abra o arquivo <output>, escolha o formato hexadecimal e salve.
 
