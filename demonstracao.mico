@@ -1,0 +1,55 @@
+  nop;
+  addi r0, r1, 10;     r1 = 10 1010
+  addi r0, r2, 5;      r2 = 5  0101
+  addi r0, r3, 2;      r3 = 2  0010
+  addi r0, r4, 8;      r4 = 8  1000
+
+  add r1, r2, r7;      10 + 5
+  dsp r7;              15
+
+  sub r4, r2, r7;      8 - 5
+  dsp r7;              3
+
+  and r4, r1, r7;      8 & 10
+  dsp r7;              8
+
+  or r2, r3, r7;       2 | 5
+  dsp r7;              7
+
+  xor r1, r2, r7;      10 ^ 5
+  dsp r7;              15
+
+  not r3, r7;          ~2
+  dsp r7;              sla
+
+  sll r4, r3, r7;      8 << 2
+  dsp r7;              32
+
+  slr r4, r3, r7;      8 >> 2
+  dsp r7;              2
+
+  ori r3, r7, 16;      2 | 16
+  dsp r7;              18
+
+  xori r3, r7, 2;      2 ^ 2
+  dsp r7;              0
+
+  addi r0, rd, 100;      a = 100
+  addi r0, re, 7;        b = 7
+
+  addi r0, rc, 1;        rc = 1
+
+  sub r7, r7, r7;        result = 0
+  jmp loop;
+
+
+loop:
+  add r7, rd, r7;        result = result + a
+  sub re, rc, re;        b = b - 1
+  jz r0, re, fim;        se b == 0 jmp fim
+  jmp loop;
+
+
+fim:
+  dsp r7;                show a * b
+  halt;
